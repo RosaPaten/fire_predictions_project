@@ -1,9 +1,8 @@
-const STATION_RAW = "Data/NOAA/Data/relevant-stations.txt";
-const OUTPUT_FILE = "Data/NOAA/Data/stations.json";
+const OUTPUT_FILE = process.env.STATIONS_JSON;
 const fs = require("fs");
 
 let stations = [];
-let data = fs.readFileSync(STATION_RAW, "utf8");
+let data = fs.readFileSync(0, "utf8");
 data_sp = data.split("\n");
 data_sp.forEach((elem, i) => {
     if (elem !== "") {
@@ -25,4 +24,4 @@ data_sp.forEach((elem, i) => {
     }
 });
 
-fs.writeFileSync(OUTPUT_FILE, JSON.stringify(stations), "utf8");
+fs.writeFileSync(OUTPUT_FILE, JSON.stringify(stations, null, 4), "utf8");

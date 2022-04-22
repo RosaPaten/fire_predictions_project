@@ -1,0 +1,6 @@
+ghcnd_all (to be filtered)
+	https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd_all.tar.gz
+Census Data
+	https://www2.census.gov/census_2010/04-Summary_File_1/California/ca2010.sf1.zip
+ghcnd stations list (to be filtered with "grep US1CA")
+	https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt
