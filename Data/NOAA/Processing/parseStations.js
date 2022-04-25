@@ -1,8 +1,14 @@
-const OUTPUT_FILE = process.env.STATIONS_JSON;
+const myArgs = process.argv.slice(2);
 const fs = require("fs");
 
+if(myArgs.length < 2){
+	console.log("Usage: node parseStations.js input output");
+	process.exit(1);
+}
+
 let stations = [];
-let data = fs.readFileSync(0, "utf8");
+let data = fs.readFileSync(myArgs[0], "utf8");
+let OUTPUT_FILE = myArgs[1];
 data_sp = data.split("\n");
 data_sp.forEach((elem, i) => {
     if (elem !== "") {
