@@ -2,13 +2,12 @@ const STATION_RAW = "Data/NOAA/Data/relevant-stations.txt";
 const OUTPUT_FILE = "Data/NOAA/Data/stations.json";
 const fs = require("fs");
 
-let stations = [];
+let stations = {};
 let data = fs.readFileSync(STATION_RAW, "utf8");
 data_sp = data.split("\n");
-data_sp.forEach((elem, i) => {
+data_sp.forEach((elem) => {
     if (elem !== "") {
         let station = {
-            id: elem.substr(0, 11),
             location: {
                 lat: Number.parseFloat(elem.substr(12, 8)),
                 long: Number.parseFloat(elem.substr(21, 9)),
@@ -21,7 +20,7 @@ data_sp.forEach((elem, i) => {
                     ? null
                     : elem.substr(80, 5).trim(),
         };
-        stations.push(station);
+        stations[elem.substr(0, 11)] = station;
     }
 });
 
