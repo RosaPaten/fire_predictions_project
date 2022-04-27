@@ -1,6 +1,6 @@
 # Global Historical Climatology Index daily data
 
-[https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd_all.tar.gz](source)
+[source](https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd_all.tar.gz)
 
 ## instructions
 
