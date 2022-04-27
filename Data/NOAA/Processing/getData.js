@@ -1,13 +1,14 @@
 const STATION_JSON = "Data/NOAA/Data/stations.json";
 const RAW_DIR = "Data/NOAA/Data/raw";
 
+const fs = require("fs");
+
 try {
     fs.accessSync(RAW_DIR);
 } catch (e) {
     fs.mkdirSync(RAW_DIR, { recursive: true });
 }
 
-const fs = require("fs");
 const https = require("https");
 const { resolve } = require("path");
 const { setTimeout } = require("timers");
