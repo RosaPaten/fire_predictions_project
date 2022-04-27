@@ -6,4 +6,6 @@
 
 requirements: nodeJS
 
-first run parseStations.js, then getData.js (this may take some time depending on your internet connection), the parseData.js
+1. run run.sh
+1. run getData.js
+1. run parseData.js
