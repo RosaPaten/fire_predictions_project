@@ -5,3 +5,5 @@ Census Data
 	https://www.census.gov/geographies/mapping-files.All.List_1421273848.html
 ghcnd stations list (to be filtered with "grep US1CA")
 	https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt
+populations by zip code
+	https://www.california-demographics.com/zip_codes_by_population
