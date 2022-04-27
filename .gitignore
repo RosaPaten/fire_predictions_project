@@ -1,2 +1,3 @@
-Data/NOAA/Data/raw
+Data/NOAA/Data/raw/*
+Data/NOAA/Data/parsed/*
 Data/NOAA/Data/stations.json
