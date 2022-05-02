@@ -1,3 +1,10 @@
 Data/NOAA/Data/raw/*
 Data/NOAA/Data/parsed/*
 Data/NOAA/Data/stations.json
+
+fire-prediction.iml
+
+.idea
+.gradle
+build
+gradle/wrapper/gradle-wrapper.jar

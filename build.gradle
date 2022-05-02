@@ -1,0 +1,28 @@
+apply plugin: "java"
+
+version "0.1"
+
+repositories{
+    mavenCentral()
+    maven{ url 'https://jitpack.io' }
+}
+
+dependencies{
+    implementation 'com.github.Anuken.arc:arc-core:v120.1'
+    implementation group: 'org.json', name: 'json', version: '20201115'
+}
+
+jar{
+    from{
+        sourceSets.main.compileClasspath.collect({ it.isDirectory() ? it : zipTree(it) })
+    }
+    manifest{
+        attributes("main-class": "Main")
+    }
+}
+
+task run(type: JavaExec){
+    run.dependsOn(jar)
+    mainClass = "-jar"
+    args jar.archiveFile.get()
+}
