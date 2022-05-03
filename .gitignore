@@ -6,4 +6,6 @@ fire-prediction.iml
 
 .idea
 .gradle
+.vscode
+bin
 build
