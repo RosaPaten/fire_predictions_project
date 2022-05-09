@@ -6,7 +6,7 @@ if (myArgs.length < 2) {
     process.exit(1);
 }
 
-let stations = [];
+let stations = {};
 let data = fs.readFileSync(myArgs[0], "utf8");
 let OUTPUT_FILE = myArgs[1];
 data_sp = data.split("\n");
