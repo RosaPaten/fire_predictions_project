@@ -1,9 +1,9 @@
 const myArgs = process.argv.slice(2);
 const fs = require("fs");
 
-if(myArgs.length < 2){
-	console.log("Usage: node parseStations.js input output");
-	process.exit(1);
+if (myArgs.length < 2) {
+    console.log("Usage: node parseStations.js input output");
+    process.exit(1);
 }
 
 let stations = [];
@@ -13,6 +13,7 @@ data_sp = data.split("\n");
 data_sp.forEach((elem) => {
     if (elem !== "") {
         let station = {
+            id: elem.substr(0, 11),
             location: {
                 lat: Number.parseFloat(elem.substr(12, 8)),
                 long: Number.parseFloat(elem.substr(21, 9)),
@@ -25,7 +26,7 @@ data_sp.forEach((elem) => {
                     ? null
                     : elem.substr(80, 5).trim(),
         };
-        stations[elem.substr(0, 11)] = station;
+        stations.push(station);
     }
 });
 
