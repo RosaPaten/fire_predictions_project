@@ -1,12 +1,12 @@
 const myArgs = process.argv.slice(2);
 const fs = require("fs");
 
-if(myArgs.length < 2){
-	console.log("Usage: node parseStations.js input output");
-	process.exit(1);
+if (myArgs.length < 2) {
+    console.log("Usage: node parseStations.js input output");
+    process.exit(1);
 }
 
-let stations = [];
+let stations = {};
 let data = fs.readFileSync(myArgs[0], "utf8");
 let OUTPUT_FILE = myArgs[1];
 data_sp = data.split("\n");
