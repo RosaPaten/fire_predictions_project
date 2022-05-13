@@ -2,6 +2,8 @@ Data/NOAA/Data/raw/*
 Data/NOAA/Data/parsed/*
 Data/NOAA/Data/stations.json
 
+Data/CALFIRE/Parsed/fires.json
+
 fire-prediction.iml
 
 .idea
