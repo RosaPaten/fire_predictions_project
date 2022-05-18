@@ -1,4 +1,5 @@
 import arc.files.Fi;
+import arc.struct.IntFloatMap;
 import arc.util.Strings;
 
 public class Main{
@@ -6,13 +7,10 @@ public class Main{
 	public static final int PPM_COLOR = 255;
 
 	public static void main(String[] args){
-		Fi fi = new Fi(args[0]);
-		double[][] arr = {
-				{0.3, 0.7, 0.9},
-				{-1, 0.1, 0.6},
-				{-1, -1, 0.7}
-		};
-		writePPM(arr, fi);
+		IntFloatMap map = new IntFloatMap();
+		for(int i = 1; i < 100; i++)
+			map.put(i, i * 5 + (float)(5 * (Math.random() - 0.5)));//y = 5x +- 2.5
+		System.out.println(LeastSquares.leastSquares(map));
 	}
 
 	public static void writePPM(double[][] arr, Fi out){
